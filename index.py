@@ -23,6 +23,7 @@ getPrize = [0] * (personNum + 1) # 有效区间1~personNum
 import random
 
 for index1 in range(1, prizeID + 1): # 跳过第一行
+    print(prizes[index1][0], ':')
     for index2 in range(int(prizes[index1][2])):
         # 生成随机数 randomID
         randomID = random.randint(1, personNum)  # 生成的随机数两边[]
@@ -30,4 +31,4 @@ for index1 in range(1, prizeID + 1): # 跳过第一行
             randomID = random.randint(1, personNum)
         # 修改数组&输出
         getPrize[randomID] = 1
-        print(prizes[index1][0], ' : ', result[randomID][1])
+        print(' ',result[randomID][1])
